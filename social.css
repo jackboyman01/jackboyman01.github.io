@@ -1,11 +1,21 @@
 .social-media {
-	text-align: center;
+	display: flex;
+	justify-content: center;
+  	align-items: center;
+  	height: 200px;
+  	border: 20px solid black;
+	color: white;
+	margin: 0 auto;
+	padding: 20px 0px;
+	text-decoration:none;
+
+	
 }
 
 .fa {
-	padding: 20px;
+	padding: 70px;
 	font-size: 30px;
-	width: 40px;
+	width: 50px;
 	text-align: center;
 	text-decoration: none;
 	margin: 5px 2px;
@@ -16,36 +26,30 @@
 }
 
 .fa-facebook {
-	background: black;
+
 	color: white;
 }
 
 .fa-twitter {
-	background: black;
 	color: white;
 }
 
 .fa-steam {
-	background: black;
 	color: white;
 }
 
 .fa-soundcloud {
-	background: black;
 	color: white;
 }
 
 .fa-youtube {
-	background: black;
 	color: white;
 }
 
 .fa-twitch {
-	background: black;
 	color: white;
 }
 
 .fa-instagram{
-	background: black;
 	color: white;	
 }

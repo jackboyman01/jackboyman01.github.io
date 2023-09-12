@@ -1,0 +1,104 @@
+/* stylesheet.css */
+
+/* Reset some default styles */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply basic styles to the header */
+header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo-text {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px; /* Adjust as needed */
+    margin-right: 10px; /* Add spacing between the logo and text */
+}
+
+.text {
+    font-size: 1.2rem; /* Adjust the font size as needed */
+}
+
+/* Style the navigation menu */
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 250px; /* Increase the margin to space out the links more */
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ff9900; /* Change the color on hover */
+}
+
+/* Style the social media links */
+.social-media {
+	display: flex;
+	justify-content: center;
+  	align-items: center;
+  	height: 200px;
+	margin: 0 auto;
+	padding: 20px 0px;
+	text-decoration:none;
+}
+
+.fa {
+	font-size: 30px;
+	width: 50px;
+	text-align: center;
+	text-decoration: none;
+	margin: 5px 2px;
+}
+
+.fa:hover {
+	opacity: 0.7;
+}
+
+.fa-facebook {
+
+	color: white;
+}
+
+.fa-twitter {
+	color: white;
+}
+
+.fa-steam {
+	color: white;
+}
+
+.fa-soundcloud {
+	color: white;
+}
+
+.fa-youtube {
+	color: white;
+}
+
+.fa-twitch {
+	color: white;
+}
+
+.fa-instagram{
+	color: white;	
+}

@@ -101,6 +101,10 @@ nav a:hover {
 	color: white;	
 }
 
+.fa-link{
+	color: white;	
+}
+
 .slideshow-container {
     position: relative;
     width: 100%; /* Make the container 100% wide */

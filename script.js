@@ -26,4 +26,4 @@ document.getElementById("nextBtn").addEventListener("click", () => {
 // Automatically advance the slideshow (optional)
 setInterval(() => {
     showSlides(++slideIndex);
-}, 10000); // Change image every 3 seconds
+}, 5000); // Change image every 5 seconds

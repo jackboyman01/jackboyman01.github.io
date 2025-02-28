@@ -1,5 +1,3 @@
-/* stylesheet.css */
-
 /* Reset some default styles */
 body, h1, h2, p, ul, li {
     margin: 0;
@@ -11,6 +9,7 @@ header {
     background-color: #333;
     color: #fff;
     display: flex;
+    flex-wrap: wrap; /* Allows the elements to wrap on smaller screens */
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
@@ -19,10 +18,11 @@ header {
 .logo-text {
     display: flex;
     align-items: center;
+    flex-wrap: wrap; /* Allows the elements to wrap on smaller screens */
 }
 
 .logo img {
-    width: 100px; /* Adjust as needed */
+    width: 80px; /* Adjust as needed */
     margin-right: 10px; /* Add spacing between the logo and text */
 }
 
@@ -31,19 +31,33 @@ header {
 }
 
 /* Style the navigation menu */
+nav {
+    flex-grow: 1; /* Allow nav to take remaining space */
+    display: flex;
+    justify-content: center; /* Center the navigation items */
+}
+
 nav ul {
     list-style-type: none;
     display: flex;
+    justify-content: space-evenly; /* Distribute the items evenly */
+    flex: 1; /* Make sure the navigation menu takes available space */
+    padding: 0;
+    margin: 0;
 }
 
 nav li {
-    margin-right: 250px; /* Increase the margin to space out the links more */
+    flex-grow: 1; /* Make each navigation item take up equal space */
+    text-align: center; /* Center the text inside each nav item */
+    margin: 0; /* Remove the margin to fit items better */
 }
 
 nav a {
+    display: flex; /* Make the links take up the full width and height of the nav item */
     text-decoration: none;
     color: #fff;
     font-weight: bold;
+    padding: 10px; /* Adjust padding as needed */
     transition: color 0.3s;
 }
 
@@ -53,57 +67,33 @@ nav a:hover {
 
 /* Style the social media links */
 .social-media {
-	display: flex;
-	justify-content: center;
-  	align-items: center;
-  	height: 200px;
-	margin: 0 auto;
-	padding: 20px 0px;
-	text-decoration:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    margin: 0 auto;
+    padding: 20px 0;
+    text-decoration: none;
 }
 
 .fa {
-	width: 50px;
-	text-align: center;
-	text-decoration: none;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
 }
 
 .fa:hover {
-	opacity: 0.7;
+    opacity: 0.7;
 }
 
-.fa-facebook {
-
-	color: white;
-}
-
-.fa-twitter {
-	color: white;
-}
-
-.fa-steam {
-	color: white;
-}
-
-.fa-soundcloud {
-	color: white;
-}
-
-.fa-youtube {
-	color: white;
-}
-
-.fa-twitch {
-	color: white;
-}
-
-.fa-instagram{
-	color: white;	
-}
-
-.fa-link{
-	color: white;	
-}
+.fa-facebook { color: white; }
+.fa-twitter { color: white; }
+.fa-steam { color: white; }
+.fa-soundcloud { color: white; }
+.fa-youtube { color: white; }
+.fa-twitch { color: white; }
+.fa-instagram { color: white; }
+.fa-link { color: white; }
 
 .slideshow-container {
     position: relative;
@@ -120,8 +110,7 @@ nav a:hover {
     height: auto; /* Maintain aspect ratio */
 }
 
-.prev,
-.next {
+.prev, .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -132,10 +121,62 @@ nav a:hover {
     cursor: pointer;
 }
 
-.prev {
-    left: 0;
+.prev { left: 0; }
+.next { right: 0; }
+
+/* Responsive Styles */
+
+/* Styles for tablets */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 10px 0;
+    }
 }
 
-.next {
-    right: 0;
+/* Styles for mobile phones */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 50px;
+    }
+
+    .text {
+        font-size: 1rem;
+        text-align: center; /* Center align text on smaller screens */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin: 5px 0;
+    }
+
+    .slideshow-container {
+        width: 100%;
+    }
+
+    button.prev, button.next {
+        padding: 5px;
+    }
 }

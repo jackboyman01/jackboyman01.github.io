@@ -4,10 +4,14 @@ body, h1, h2, p, ul, li {
     padding: 0;
 }
 
+body{
+    background-color: #696969;
+}
+
 /* Apply basic styles to the header */
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #333333;
+    color: #ffffff;
     display: flex;
     flex-wrap: wrap; /* Allows the elements to wrap on smaller screens */
     justify-content: space-between;
@@ -55,7 +59,7 @@ nav li {
 nav a {
     display: flex; /* Make the links take up the full width and height of the nav item */
     text-decoration: none;
-    color: #fff;
+    color: #ffffff;
     font-weight: bold;
     padding: 10px; /* Adjust padding as needed */
     transition: color 0.3s;
@@ -86,14 +90,14 @@ nav a:hover {
     opacity: 0.7;
 }
 
-.fa-facebook { color: white; }
-.fa-twitter { color: white; }
-.fa-steam { color: white; }
-.fa-soundcloud { color: white; }
-.fa-youtube { color: white; }
-.fa-twitch { color: white; }
-.fa-instagram { color: white; }
-.fa-link { color: white; }
+.fa-facebook { color: #ffffff; }
+.fa-twitter { color: #ffffff; }
+.fa-steam { color: #ffffff; }
+.fa-soundcloud { color: #ffffff; }
+.fa-youtube { color: #ffffff; }
+.fa-twitch { color: #ffffff; }
+.fa-instagram { color: #ffffff; }
+.fa-link { color: #ffffff; }
 
 .slideshow-container {
     position: relative;
@@ -115,8 +119,8 @@ nav a:hover {
     top: 50%;
     transform: translateY(-50%);
     padding: 10px;
-    background-color: #333;
-    color: #fff;
+    background-color: #333333;
+    color: #ffffff;
     border: none;
     cursor: pointer;
 }

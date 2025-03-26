@@ -15,6 +15,14 @@ function showSlides(index) {
     slides[slideIndex].style.display = "block";
 }
 
+document.getElementById("prevBtn").addEventListener("click", () => {
+    showSlides(--slideIndex);
+});
+
+document.getElementById("nextBtn").addEventListener("click", () => {
+    showSlides(++slideIndex);
+});
+
 // Automatically advance the slideshow
 setInterval(() => {
     showSlides(++slideIndex);

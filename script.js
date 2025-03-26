@@ -15,11 +15,20 @@ function showSlides(index) {
     slides[slideIndex].style.display = "block";
 }
 
-document.getElementById("prevBtn").addEventListener("click", () => {
+const prevButton = document.getElementById("prevBtn");
+const nextButton = document.getElementById("nextBtn");
+
+// Function to add event listeners for both click and touch
+function addEventListeners(button, action) {
+    button.addEventListener("click", action); // For desktop users
+    button.addEventListener("touchstart", action, { passive: true }); // For mobile users
+}
+
+// Add event listeners to the buttons
+addEventListeners(prevButton, () => {
     showSlides(--slideIndex);
 });
-
-document.getElementById("nextBtn").addEventListener("click", () => {
+addEventListeners(nextButton, () => {
     showSlides(++slideIndex);
 });
 

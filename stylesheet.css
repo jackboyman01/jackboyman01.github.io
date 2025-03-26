@@ -116,18 +116,26 @@ nav a:hover {
 
 .prev, .next {
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     padding: 10px;
-    background-color: #333333;
-    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 18px;
     border: none;
     cursor: pointer;
 }
 
-.prev { left: 0; }
-.next { right: 0; }
-
 .prev:hover, .next:hover {
-    background-color: #ff9900; /* Add hover effect */
+    background-color: #ff9900; /* Highlight effect on hover */
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
 }
 
 .dot {

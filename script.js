@@ -15,20 +15,11 @@ function showSlides(index) {
     slides[slideIndex].style.display = "block";
 }
 
-const prevButton = document.getElementById("prevBtn");
-const nextButton = document.getElementById("nextBtn");
-
-// Function to add event listeners for both click and touch
-function addEventListeners(button, action) {
-    button.addEventListener("click", action); // For desktop users
-    button.addEventListener("touchstart", action, { passive: true }); // For mobile users
-}
-
-// Add event listeners to the buttons
-addEventListeners(prevButton, () => {
+document.getElementById("prevBtn").addEventListener("click", () => {
     showSlides(--slideIndex);
 });
-addEventListeners(nextButton, () => {
+
+document.getElementById("nextBtn").addEventListener("click", () => {
     showSlides(++slideIndex);
 });
 

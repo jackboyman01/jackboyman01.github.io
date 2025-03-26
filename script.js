@@ -23,6 +23,9 @@ document.getElementById("nextBtn").addEventListener("click", () => {
     showSlides(++slideIndex);
 });
 
+document.getElementById("prevBtn").setAttribute("aria-label", "Previous Slide");
+document.getElementById("nextBtn").setAttribute("aria-label", "Next Slide");
+
 // Automatically advance the slideshow (optional)
 setInterval(() => {
     showSlides(++slideIndex);

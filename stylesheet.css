@@ -1,11 +1,18 @@
-/* Reset some default styles */
+/* Import a modern Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Reset some default styles for consistency */
 body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
 }
 
-body{
-    background-color: #696969;
+/* Body background and base font */
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #232526;
+    min-height: 100vh;
 }
 
 /* Apply basic styles to the header */
@@ -13,74 +20,154 @@ header {
     background-color: #333333;
     color: #ffffff;
     display: flex;
-    flex-wrap: wrap; /* Allows the elements to wrap on smaller screens */
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 18px 32px;
+    border-radius: 0 0 18px 18px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    margin-bottom: 32px;
+    transition: box-shadow 0.3s; /* Smooth shadow transition */
+    backdrop-filter: blur(8px) saturate(180%);
+    background-color: rgba(51, 51, 51, 0.85);
+}
+
+/* Header shadow on hover for depth */
+header:hover {
+    box-shadow: 0 8px 32px rgba(44,62,80,0.18);
 }
 
 .logo-text {
     display: flex;
     align-items: center;
-    flex-wrap: wrap; /* Allows the elements to wrap on smaller screens */
+    flex-wrap: wrap;
 }
 
 .logo img {
-    width: 80px; /* Adjust as needed */
-    margin-right: 10px; /* Add spacing between the logo and text */
+    width: 80px;
+    margin-right: 14px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
 }
 
 .text {
-    font-size: 1.2rem; /* Adjust the font size as needed */
+    font-size: 1.3rem;
     text-align: center;
     text-decoration: none;
+    letter-spacing: 1px;
 }
 
 .text a {
     text-decoration: none;
     color: #ffffff;
     font-weight: bold;
-    padding: 10px; /* Adjust padding as needed */
-    transition: color 0.3s;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
 }
 
 .text a:hover {
-    color: #ff9900; /* Change the color on hover */
+    color: #ff9900;
+    background: rgba(255,153,0,0.08);
+}
+
+/* Cute pastel download link style */
+.text a[download] {
+    display: inline-block;
+    background: linear-gradient(90deg, #ffe0fa 0%, #a2aaff 100%);
+    color: #a259c6;
+    font-weight: bold;
+    border-radius: 16px;
+    padding: 12px 28px;
+    margin: 16px 0;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(162,89,198,0.08);
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.text a[download]:hover {
+    background: linear-gradient(90deg, #ffb6d5 0%, #a2aaff 100%);
+    color: #fff;
+    transform: scale(1.07) rotate(-2deg);
+    box-shadow: 0 4px 16px rgba(255,182,193,0.18);
+}
+
+/* Cute pastel style for game link */
+.text a[href*="itch.io"] {
+    display: inline-block;
+    background: linear-gradient(90deg, #ffe0fa 0%, #a2aaff 100%);
+    color: #a259c6;
+    font-weight: bold;
+    border-radius: 16px;
+    padding: 12px 28px;
+    margin: 16px 0;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(162,89,198,0.08);
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+.text a[href*="itch.io"]:hover {
+    background: linear-gradient(90deg, #ffb6d5 0%, #a2aaff 100%);
+    color: #fff;
+    transform: scale(1.07) rotate(-2deg);
+    box-shadow: 0 4px 16px rgba(255,182,193,0.18);
 }
 
 /* Style the navigation menu */
 nav {
-    flex-grow: 1; /* Allow nav to take remaining space */
+    flex-grow: 1;
     display: flex;
-    justify-content: center; /* Center the navigation items */
+    justify-content: center;
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
-    justify-content: space-evenly; /* Distribute the items evenly */
-    flex: 1; /* Make sure the navigation menu takes available space */
+    justify-content: space-evenly;
+    flex: 1;
     padding: 0;
     margin: 0;
+    gap: 12px;
 }
 
 nav li {
-    flex-grow: 1; /* Make each navigation item take up equal space */
-    text-align: center; /* Center the text inside each nav item */
-    margin: 0; /* Remove the margin to fit items better */
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
 }
 
 nav a {
-    display: flex; /* Make the links take up the full width and height of the nav item */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     color: #ffffff;
-    font-weight: bold;
-    padding: 10px; /* Adjust padding as needed */
-    transition: color 0.3s;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 6px;
+    width: 0;
+    height: 2px;
+    background: #ff9900;
+    transition: all 0.3s;
+    transform: translateX(-50%);
 }
 
 nav a:hover {
-    color: #ff9900; /* Change the color on hover */
+    color: #ff9900;
+    background: rgba(255,153,0,0.08);
+}
+
+nav a:hover::after {
+    width: 80%;
 }
 
 /* Style the social media links */
@@ -88,91 +175,152 @@ nav a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
+    gap: 32px;
+    height: 120px;
     margin: 0 auto;
     padding: 20px 0;
     text-decoration: none;
 }
 
 .fa {
-    width: 50px;
-    text-align: center;
+    width: 64px;
+    height: 64px;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ffb347 0%, #ff6961 100%);
+    color: #fffbe7;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 8px rgba(255,179,71,0.10);
     text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 1;
+    position: relative;
+}
+
+/* Fix for Font Awesome 4 pseudo-elements (icon centering) */
+.fa:before {
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    line-height: 64px;   /* Vertically center icon */
+    margin: 0;
+    position: static;
 }
 
 .fa:hover {
-    opacity: 0.7;
+    background: linear-gradient(135deg, #ff6961 0%, #ffb347 100%);
+    color: #fffbe7;
+    transform: scale(1.15);
+    box-shadow: 0 4px 16px rgba(255,153,0,0.18);
+    border: 2px solid #fffbe7;
+    opacity: 1;
 }
 
-.fa-facebook { color: #ffffff; }
-.fa-twitter { color: #ffffff; }
-.fa-steam { color: #ffffff; }
-.fa-soundcloud { color: #ffffff; }
-.fa-youtube { color: #ffffff; }
-.fa-twitch { color: #ffffff; }
-.fa-instagram { color: #ffffff; }
-.fa-link { color: #ffffff; }
+.fa-facebook, .fa-twitter, .fa-steam, .fa-soundcloud, .fa-youtube, .fa-twitch, .fa-instagram, .fa-link {
+    color: #fff;
+}
 
+/* Soft shadow and rounded corners for main content and slideshow */
+main, .slideshow-container {
+    box-shadow: 0 8px 32px rgba(44,62,80,0.08);
+    border-radius: 18px;
+    background: #fff;
+}
+
+/* Slideshow container styling */
 .slideshow-container {
     position: relative;
-    width: 25%; /* Adjust the width as necessary */
-    margin: 0 auto; /* Centers the container horizontally */
-    overflow: hidden; /* Hide overflow for full-width images */
+    width: 32%;
+    min-width: 320px;
+    max-width: 480px;
+    margin: 0 auto 32px auto;
+    overflow: hidden;
     display: flex;
-    justify-content: center; /* Centers the images inside the container */
-    align-items: center; /* Vertically centers the images */
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    background: #fff;
 }
 
+/* Slideshow image styling */
 .slideshow-image img {
-    width: 100%; /* Adjust image size to container width */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+    transition: transform 0.4s;
 }
 
+/* Slight scale and shadow on slideshow image hover */
+.slideshow-image img:hover {
+    transform: scale(1.06);
+    box-shadow: 0 4px 24px rgba(44,62,80,0.12);
+}
+
+/* Slideshow navigation button styling */
 .prev, .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
+    padding: 12px 16px;
+    background-color: rgba(35,37,38,0.7);
     color: white;
-    font-size: 18px;
+    font-size: 22px;
     border: none;
-    cursor: pointer;
-}
-
-.prev:hover, .next:hover {
-    background-color: #ff9900; /* Highlight effect on hover */
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-.dot {
-    height: 15px;
-    width: 15px;
-    background-color: #333333;
     border-radius: 50%;
-    display: inline-block;
-    margin: 5px;
     cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    z-index: 2;
 }
 
-.active-dot {
+/* Slideshow navigation button hover effect */
+.prev:hover, .next:hover {
     background-color: #ff9900;
+    color: #232526;
+}
+
+/* Slideshow navigation button positions */
+.prev { left: 16px; }
+.next { right: 16px; }
+
+/* Focus style for accessibility (keyboard navigation) */
+a:focus, button:focus {
+    outline: 2px solid #ff9900;
+    outline-offset: 2px;
+}
+
+/* Badge style */
+.badge {
+    display: inline-block;
+    background: linear-gradient(90deg, #ffb6d5 0%, #ffe066 100%);
+    color: #a259c6;
+    font-weight: bold;
+    border-radius: 12px;
+    padding: 4px 14px;
+    margin-top: 6px;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
 }
 
 /* Responsive Styles */
+/* Medium screens */
+@media (max-width: 900px) {
+    .slideshow-container {
+        width: 60%;
+        min-width: 220px;
+    }
+}
 
-/* Styles for tablets */
+/* Tablet screens */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
         align-items: center;
+        padding: 14px 8px;
     }
 
     .logo img {
@@ -182,44 +330,96 @@ nav a:hover {
     nav ul {
         flex-direction: column;
         align-items: center;
+        gap: 8px;
     }
 
     nav li {
-        margin: 10px 0;
+        margin: 8px 0;
+    }
+
+    .slideshow-container {
+        width: 90%;
+        min-width: 180px;
     }
 }
 
-/* Styles for mobile phones */
+/* Mobile screens */
 @media (max-width: 480px) {
-    
     header {
         flex-direction: column;
         align-items: center;
+        padding: 10px 4px;
     }
 
     .logo img {
-        width: 50px;
+        width: 44px;
     }
 
     .text {
         font-size: 1rem;
-        text-align: center; /* Center align text on smaller screens */
+        text-align: center;
     }
 
     nav ul {
         flex-direction: column;
         align-items: center;
+        gap: 4px;
     }
 
     nav li {
-        margin: 5px 0;
+        margin: 4px 0;
     }
 
     .slideshow-container {
         width: 100%;
+        min-width: 120px;
     }
 
-    button.prev, button.next {
-        padding: 5px;
+    .prev, .next {
+        padding: 8px 10px;
+        font-size: 18px;
     }
+}
+
+/* Extra small screens */
+@media (max-width: 600px) {
+  .logo-text {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+  }
+  .logo {
+    margin-bottom: 8px;
+  }
+  .text {
+    align-items: center;
+    text-align: center;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 8px;
+    padding: 0;
+  }
+  .slideshow-container {
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 0;
+  }
+  .slideshow-image img {
+    width: 90vw !important;
+    max-width: 98vw;
+    height: auto;
+  }
+  .social-media {
+    flex-wrap: wrap;
+    gap: 12px !important;
+  }
+  .social-media .fa {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+  }
+  body, main {
+    padding: 0 4vw;
+  }
 }

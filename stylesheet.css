@@ -258,6 +258,12 @@ main {
     height: 1080px;
 }
 
+@media (max-width: 600px) {
+  .slideshow-container.paused {
+    height: 700px;
+  }
+}
+
 /* Add fade animation for slideshow images */
 .slideshow-image {
     opacity: 0;
@@ -477,4 +483,56 @@ a:focus, button:focus {
     box-shadow: 0 4px 16px rgba(162,89,198,0.18);
     text-align: center;
     letter-spacing: 1px;
+}
+
+/* Responsive Spotify embed */
+.spotify-embed-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 32px 0 64px 0;
+  width: 100%;
+}
+
+.spotify-embed-wrapper iframe {
+  width: 100%;
+  max-width: 480px;
+  min-width: 180px;
+  height: 352px;
+  border-radius: 12px;
+  border: none;
+}
+
+@media (max-width: 600px) {
+  .spotify-embed-wrapper iframe {
+    height: 180px;
+    min-width: 0;
+    max-width: 98vw;
+  }
+}
+
+/* Responsive itch.io game embed */
+.itchio-embed-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 32px 0 24px 0;
+  width: 100%;
+}
+
+.itchio-embed-wrapper iframe {
+  width: 100%;
+  max-width: 800px;
+  min-width: 180px;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  border: none;
+  height: auto;
+  background: #000;
+}
+
+@media (max-width: 600px) {
+  .itchio-embed-wrapper iframe {
+    max-width: 98vw;
+    min-width: 0;
+    aspect-ratio: 16 / 9;
+  }
 }

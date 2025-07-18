@@ -20,11 +20,13 @@ function showSlides(index) {
     slides[slideIndex].focus();
 }
 
-document.getElementById("prevBtn").addEventListener("click", () => {
+document.getElementById("prevBtn").addEventListener("click", (e) => {
+    e.stopPropagation(); // Prevents pausing when button is tapped
     showSlides(--slideIndex);
 });
 
-document.getElementById("nextBtn").addEventListener("click", () => {
+document.getElementById("nextBtn").addEventListener("click", (e) => {
+    e.stopPropagation(); // Prevents pausing when button is tapped
     showSlides(++slideIndex);
 });
 

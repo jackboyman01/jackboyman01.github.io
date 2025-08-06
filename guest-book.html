@@ -1,24 +1,24 @@
-﻿<!DOCTYPE html>
-<!-- HTML document for the Sample Packs page -->
+<!DOCTYPE html>
+<!-- Guest Book HTML document for JackSoundWorks -->
 <html lang="en">
 <head>
     <!-- Meta tags for character set, viewport, and SEO -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="p:domain_verify" content="4258d46f1924e84fee33c72efd9e5cc6"/>
-    <meta name="description" content="JackSoundWorks - Making music better. Download Serum Packs, Sample Packs, and more.">
-    <meta name="keywords" content="sample packs, music, JackSoundWorks, free music resources, electronic music">
+    <meta name="description" content="JackSoundWorks Guest Book - Leave a message in my cozy femboy red panda den!">
+    <meta name="keywords" content="guest book, JackSoundWorks, music, femboy, red panda, messages">
     <meta name="author" content="JackSoundWorks">
-    <meta property="og:title" content="Sample Packs - JackSoundWorks">
-    <meta property="og:description" content="Download free Sample Packs for music production.">
+    <meta property="og:title" content="JackSoundWorks Guest Book">
+    <meta property="og:description" content="Leave a message in my cozy femboy red panda den!">
     <meta property="og:image" content="logo.png">
-    <meta property="og:url" content="https://jackboyman.github.io/sample-packs.html">
+    <meta property="og:url" content="https://jackboyman.github.io/guest-book.html">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Sample Packs - JackSoundWorks">
-    <meta name="twitter:description" content="Download free Sample Packs for music production.">
+    <meta name="twitter:title" content="JackSoundWorks Guest Book">
+    <meta name="twitter:description" content="Leave a message in my cozy femboy red panda den!">
     <meta name="twitter:image" content="logo.png">
-    <link rel="canonical" href="https://jackboyman.github.io/sample-packs.html">
-    <title>Bundles</title>
+    <link rel="canonical" href="https://jackboyman.github.io/guest-book.html">
+    <title>Guest Book - JackSoundWorks</title>
     <!-- Favicon and stylesheets -->
     <link rel="icon" href="logo.png">
     <link rel="stylesheet" href="stylesheet.css">
@@ -53,14 +53,32 @@
         </nav>
     </header>
     <main>
-        <!-- Page heading -->
-        <h2 class="slideshow-heading" style="text-align:center; margin-top:32px; margin-bottom:16px; font-size:2rem; color:#a259c6; letter-spacing:1px;">
-            Sample Packs UwU
-        </h2>
-        <!-- Download link for Sample Pack -->
-        <div class="text" style="text-align:center;">
-            <a href="Sample Packs/Sample Pack1.zip" download>Download Sample Pack 1</a>
-        </div>
+        <!-- Guest Book Section -->
+        <section class="guest-book" aria-label="Guest Book">
+            <h2 class="guest-book-heading">Guest Book 💕</h2>
+            <p class="guest-book-subtitle">Leave a message in my cozy den! 🦊✨</p>
+            
+            <!-- Guest Book Form -->
+            <form id="guestBookForm" class="guest-book-form">
+                <div class="form-group">
+                    <label for="guestName">Name:</label>
+                    <input type="text" id="guestName" name="name" required placeholder="Your name (or anonymous)">
+                </div>
+                <div class="form-group">
+                    <label for="guestMessage">Message:</label>
+                    <textarea id="guestMessage" name="message" required placeholder="Share your thoughts, music recommendations, or just say hi! 💖" rows="4"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Leave Message ✨</button>
+            </form>
+            
+            <!-- Guest Book Entries Display -->
+            <div class="guest-book-entries">
+                <h3>Recent Messages</h3>
+                <div id="entriesContainer" class="entries-container">
+                    <!-- Entries will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
     </main>
     <!-- Decorative accent bar at the bottom -->
     <div style="width:100%;height:8px;background:linear-gradient(90deg,#f7a8b8 0%,#fff 33%,#a2aaff 66%,#fff 100%);border-radius:0 0 8px 8px;"></div>
@@ -77,5 +95,11 @@
             <li><a href="https://linktr.ee/jackboyman01" class="fa fa-link" aria-label="Linktree"></a></li>
         </ul>
     </footer>
+    <!-- Firebase configuration -->
+    <script type="module" src="firebase-config.js"></script>
+    <!-- Main JavaScript file for slideshow and interactivity -->
+    <script src="script.js"></script>
+    <!-- Guest Book JavaScript file -->
+    <script src="guest-book.js"></script>
 </body>
-</html>
+</html> 

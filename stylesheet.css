@@ -92,6 +92,27 @@ header:hover {
     box-shadow: 0 4px 16px rgba(255,182,193,0.18);
 }
 
+/* Cute pastel style for Google Drive links */
+.text a[href*="drive.google.com"] {
+    display: inline-block;
+    background: linear-gradient(90deg, #ffe0fa 0%, #a2aaff 100%);
+    color: #a259c6;
+    font-weight: bold;
+    border-radius: 16px;
+    padding: 12px 28px;
+    margin: 16px 0;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(162,89,198,0.08);
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.text a[href*="drive.google.com"]:hover {
+    background: linear-gradient(90deg, #ffb6d5 0%, #a2aaff 100%);
+    color: #fff;
+    transform: scale(1.07) rotate(-2deg);
+    box-shadow: 0 4px 16px rgba(255,182,193,0.18);
+}
+
 /* Cute pastel style for game link */
 .text a[href*="itch.io"] {
     display: inline-block;

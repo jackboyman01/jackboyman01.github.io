@@ -57,6 +57,12 @@ service cloud.firestore {
       allow read: if true;
       allow write: if true; // For now - we'll secure this later
     }
+    
+    // Allow newsletter subscriptions
+    match /newsletterSubscribers/{document} {
+      allow read: if true; // Allow reads to check for duplicate emails
+      allow write: if true; // Anyone can subscribe
+    }
   }
 }
 ```

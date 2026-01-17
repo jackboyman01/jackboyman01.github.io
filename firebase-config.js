@@ -1,7 +1,7 @@
-// Firebase configuration for JackSoundWorks Guest Book
+// Firebase configuration for JackSoundWorks Guest Book and Newsletter
 // Initialize Firebase
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
-import { getFirestore, collection, addDoc, getDocs, orderBy, query, serverTimestamp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
+import { getFirestore, collection, addDoc, getDocs, orderBy, query, serverTimestamp, where } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
 
 // Your Firebase configuration
 // You'll need to replace these with your actual Firebase project config
@@ -25,4 +25,5 @@ window.addDoc = addDoc;
 window.getDocs = getDocs;
 window.orderBy = orderBy;
 window.query = query;
-window.serverTimestamp = serverTimestamp; 
+window.serverTimestamp = serverTimestamp;
+window.where = where; 
